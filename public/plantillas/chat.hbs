@@ -1,0 +1,22 @@
+<style>
+    .table td,
+    .table th {
+        vertical-align: middle;
+    }
+</style>
+
+{{#if _mensajes.length}}
+
+
+<div class="table-responsive">
+    
+        
+        {{#each _mensajes}}
+        
+            <font color="blue"><b>{{this.author.id}} </b></font> [<font color="maroon">{{this.fechaHora}}</font>] <font color="green"> <i>: {{this.text}} </i></font> <img src={{this.avatar}} width="40" eight="30">
+            <br> 
+        
+        {{/each}} 
+    
+</div>
+{{/if}}
