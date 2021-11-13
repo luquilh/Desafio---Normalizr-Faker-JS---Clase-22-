@@ -108,3 +108,26 @@ formEnviarMensaje.addEventListener('submit', e => {
     socket.emit('nuevo-mensaje', mensaje);
     formEnviarMensaje.reset()
 })
+
+const botonLogout = document.getElementById('desloguear')
+botonLogout.addEventListener('click', desloguearUsuario);
+
+async function desloguearUsuario(e){
+   
+    e.preventDefault()
+    await fetch('/logout', {
+        method: 'GET',
+        //mode: 'cors'
+      })
+ 
+      console.log('ANTES DE REPLACE')
+    //location.replace('/logout')
+    
+  
+    console.log('DESPUES DE REPLACE')
+    setTimeout(()=> console.log('LUCAS SETTIMEOUT'),20000)
+    
+        //console.log('Lucas 2 segundos despues')
+
+    
+}
